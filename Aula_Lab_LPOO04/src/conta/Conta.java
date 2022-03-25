@@ -53,5 +53,12 @@ public class Conta {
 	
 	public void fazerPix(double valor, Conta contaDestinatario) {
 		
+			if (valor <= saldo) {
+				saldo -= valor;
+				contaDestinatario.depositar(valor);
+			} else {
+				System.out.println("Mermão, tu não tem grana");
+			}
+		
 	}
 	}
